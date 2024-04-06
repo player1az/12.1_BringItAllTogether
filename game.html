@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="main.css">
+    <script src="code.js"></script>
+</head>
+<body>
+    <nav>
+        <h2>
+            <a href="./index.html">Home</a><br>
+            <a href="./boards.html">Boards</a><br>
+            <a href="./strings.html">Palindrome Checker</a><br>
+        </h2>
+    </nav>
+    <audio id="backgroundMusicGame" loop> <!--This line establishes the ID and looping function-->
+        <source src="Spy vs Spy - DJ Williams.mp3" type="audio/mpeg"><!--This defines the source and file type-->
+        Your browser does not support the audio element. <!--Error message should you not be able to play the song-->
+      </audio>
+    <h1>Welcome to My Casino</h1>
+    <h2>Enjoy your stay.</h2>
+    
+    <p id="sample">Pick a game</p>
+    <div>            
+        <button onclick="toggleBackgroundMusic()">Toggle Music</button>
+        <button type="button" onclick="rewrite_welcome(), craps_game()">Craps</button> 
+    </div>
+    <script>
+        var backgroundMusic = document.getElementById("backgroundMusic"); //Get Element
+        
+        function toggleBackgroundMusic() {
+          if (backgroundMusicGame.paused) { //if its off
+            backgroundMusicGame.play(); //turn it on
+          } else { //if its on
+            backgroundMusicGame.pause(); //turn it off
+          }
+        }
+        </script>
+</body>
+
+</html>
